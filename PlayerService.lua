@@ -40,6 +40,15 @@ function module.FakeAge(self, Age)
 end
 
 -- // Class Functions
+function module.Kick(self, Reason)
+    self:GetPlayer():Kick(Reason or "")
+end
+
+function module.Quit(self)
+    if not self then return end
+    game:Shutdown()
+end
+
 function module.RespawnCharacter(self)
     self:GetPlayer():LoadCharacter()
 end
